@@ -1,0 +1,110 @@
+
+<div class='help plugins'>
+	<img title='Go back to the search page' ng-click='go("search")'src='plugins/jpm-red.png' style='width: 64px; text-align: top; float: right; margin-left: 20px; vertical-align: middle'>
+	<h2>Help for JPM4J</h2>
+	<p>
+		This JPM Web Console plugin provides a convenient way to find and install bundles. It finds its bundles through <a target='_' href="https://jpm4j.org">jpm4j</a>,
+		a large catalog of Java binaries. Bundles can be found by searching on <i>keywords</i> or (when the search bar is empty) on Web Console plugins.
+	</p>
+	<img id='screen' class='screen' src='plugins/screen.png'>
+	<table caption='Legend'>
+		<tr>
+			<td>1</td>
+			<td>Press this button to activate the JPM Manager.</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>The search bar. Enter a search term. Leaving the field empty will search for plugins that are specifically marked for the Web Console. You can enter
+			modifiers that limit the search. A modifier is a word or letter, then a colon (':') and then a parmater. The following modifiers are available:
+			
+			<ul>
+				<li>a: - Artifact id, for example <code>a:org.osgi</code>
+				<li>g: - Group id, for example <code>a:org.osgi</code>
+				<li>p: - Package name, for example <code>p:org.osgi.service.cm</code>
+				<li>bsn: - The bundle symbolic name, for example <code>bsn:org.apache.felix.*</code>
+				<li>cat: - Category, for example <code>cat:test</code>
+				<li>version: - Match the version literally (required for Maven sometimes), for example <code>version:1.0.04-SNAPSHOT</code>
+				<li>baseline: - Match the non-qualifier part of the version in normalized form, for example <code>baseline:1.0.4</code>
+				<li>qualifier: - Match the qualifier part of the version, for example <code>qualifier:2012*</code>
+				<li>o: - Match the organization name, for example <code>o:aQute*</code>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>The search button. Press to search.</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>The help button, brings you on this page.</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>The place where results are shown. The first symbol signifies the state of the bundle. The following symbols are used:
+				<ul>
+					<li class="manage">Is installed, can be managed through the bundle tab.
+					<li class="install">Is not installed currently but can be downloaded and installed.
+					<li class="update">Installed but there is a new version available.
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>A button that provides the most logical action for this bundle:
+				<ul>
+					<li><em>Manage</em> - Bundle is installed and correct version, the button will take you to the bundles tab.
+					<li><em>Install</em> - Bundle is not installed, the button will attempt to install this bundle. It is possible that this will not succeed,
+						see [7] for more the status
+					<li><em>Update</em> - The bundle is installed but there is a newer version. Press the button to update the bundle.
+				</ul>
+			</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>Status of the last command or empty when it was ok. The X button can clear the line if it contains a message.</td>
+		</tr>
+	</table>
+	<h2>Configuration</h2>
+	<p>This plugin can be configured with Config Admin, its PID is:</p>
+	<pre>jpm4j.webconsole.impl.WebconsoleRemotePlugins</pre>
+	<p>The following configuration fields can be set:
+	</p>
+	<table>
+		<tr>
+			<th>Field</td>
+			<th>Type</td>
+			<th>Default</td>
+			<th>Description</td>
+		</tr>
+		<tr>
+			<td><code>url</code></td>
+			<td><code>URI</code></td>
+			<td><code>https://jpm4j.org/rest<code></td>
+			<td>The URL to the JPM library</td>
+		</tr>
+		<tr>
+			<td><code>debug</code></td>
+			<td><code>BOOL</code></td>
+			<td><code>false</code></td>
+			<td>Will print out debugging information to the log</td>
+		</tr>
+	</table>
+	<h2>For Webconsole Developers</h2>
+	<p>
+		Web Console Developers that want to show up in the default search list should add a
+		<code>x-jpm-plugin</code>
+		OSGi capability to their manifest with an attribute of
+		<code>x-jpm-plugin=apache.felix.webconsole</code>
+		. For example:
+	</p>
+	<pre>
+	Provide-Capability: \
+		x-jpm-plugin; \
+			x-jpm-plugin=apache.felix.webconsole</pre>
+	<p>
+		All bundles in Maven Central and many other repositories are automatically added. You can also maintain your own repository, potentially in addition
+		to Maven Central, on Github, see <a href="https://www.jpm4j.org/#/md/adding">how to add a repository to jpm4j.</a>
+	</p>
+	<hr>
+	<button ng-click='go("search")'>back to main page</button>
+</div>

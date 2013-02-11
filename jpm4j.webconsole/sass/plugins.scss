@@ -1,0 +1,127 @@
+$readableWidth : 600px;
+
+.aq-console-plugins {
+	* { box-sizing: border-box; }
+	
+	button { cursor: pointer; }
+	
+	form {
+		max-width: $readableWidth;
+	}
+	
+	p, ul, li, pre {
+		margin: 6px 0 6px 0;
+		line-height: 110%;
+	}
+	em {
+		font-style: italic;
+	}
+	pre {
+		margin: 10px 0 10px 0;
+		padding: 6px;
+		border: 1px solid lightgrey;
+		background-color: #F0F0F0;
+	}
+	hr {
+		margin-top: 10px;
+	}
+	button, input {
+		border: 1px solid #d3d3d3/*{borderColorDefault}*/;
+		background: #e6e6e6/*{bgColorDefault}*/ url(images/ui-bg_glass_75_e6e6e6_1x400.png)/*{bgImgUrlDefault}*/ 50%/*{bgDefaultXPos}*/ 50%/*{bgDefaultYPos}*/ repeat-x/*{bgDefaultRepeat}*/;
+		color: #555555/*{fcDefault}*/;
+		border-radius: 4px;
+		-moz-border-radius: 4px;
+		-webkit-border-radius: 4px;
+		height: 20px;
+	}
+	button {
+		min-width: 8em;
+		padding: 2px;
+		&.close {
+			float: right;
+		}
+		&.help {
+			width:auto;
+			min-width:20px;
+}
+	}
+	input {
+		width: 300px;
+		padding: 2px;
+	}
+	h2, h3 {
+		font-weight: bold;
+		font-size: 140%;	
+		margin-bottom: 6px;
+		margin-top: 0px;
+	}
+	h3 {
+		font-size: 120%;	
+	}
+		
+	.manage:before { content: "\2729\00A0 "; }
+	.install:before { content: "\2B07\00A0 "; }
+	.update:before { content: "\272E\00A0 ";}
+
+
+	.buttons {
+		clear: both;
+		padding: 10px 0px 20px 0px;
+		input[type=text] { float: right; }
+	}
+	
+	.plugins {
+		max-width: $readableWidth;
+		margin-top: 40px;
+		.plugin {
+			padding-top: 10px;
+			border-top: 1px solid lightgrey;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			clear: both;
+			button {
+				margin: 10px 0 10px 0px;
+				float: right;
+				clear: both;
+			}
+		}
+		margin-bottom: 40px;
+	}
+
+	img.icon {
+		width: 64px;
+		max-height: 64px;
+		float: right;
+		padding: 0px 0px 8px 10px ;
+	}
+	
+	.statline {
+		min-height: 16px;
+	}
+	
+	table {
+		width: 100%;
+		td, th {
+			padding: 4px;
+			border-right: 1px solid lightgrey;
+			&:last-child { border-right: none; }
+		}
+		th { font-weight: bold; }
+		td:nth-child(1) { font-weight: bold; text-align: right;}
+		tr{ border-top: 1px solid lightgrey; }
+	}
+	.help {
+		#screen {
+			width: 100%;
+			border: 1px solid gray;
+			margin: 12px 0 12px 0px;
+			padding: 10px;
+			border-radius: 4px;
+			-moz-border-radius: 4px;
+			-webkit-border-radius: 4px;
+		}
+		h2 {
+			margin-top: 20px;
+		}
+}
+}

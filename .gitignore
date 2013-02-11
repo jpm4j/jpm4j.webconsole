@@ -4,3 +4,8 @@
 *.jar
 *.war
 *.ear
+.sass-cache/
+bin/
+bin_test/
+generated/
+

@@ -1,0 +1,23 @@
+
+<div class='plugins'>
+<img src='plugins/jpm-red.png' style='width: 64px; text-align: top; float: right; margin-left: 20px; vertical-align: middle'>
+<h2 ng-show='query'>Bundles</h2>
+<h2 ng-show='!query'>Web Console Plugins</h2>
+<form class=buttons ng-submit='search()'>
+	<div>
+		<button class='help' ng-click='go("help")'>?</button>
+		<button class='search' ng-click='search()'>Search</button>
+		<input type=text ng-model=query placeholder='Enter words (now showing Webconsole plugins)'>
+	</div>
+</form>
+	<div class=plugin ng-repeat='program in programs'>
+		<img class='icon' ng-src='{{icon(program)}}' ng-show='icon(program)'>
+		<h3 class='{{type(program)}}'>
+			<a href="https://www.jpm4j.org/#/p/{{program.groupId}}/{{program.artifactId}}/" target=_>{{program.last.bsn}} {{program.last.baseline}}</a>
+		</h3>
+		<p>{{program.wiki.text || program.last.description}}</p>
+		<button ng-click='install(program)' ng-show="'install'==type(program)">Install</button>
+		<button ng-click='update(program)' ng-show="'update'==type(program)">Update</button>
+		<button ng-click='manage(program)' ng-show="'manage'==type(program)">Manage</button>
+	</div>
+</div>

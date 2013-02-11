@@ -1,0 +1,25 @@
+<script type="application/javascript">
+	
+var oldjQuery = window.jQuery
+window.jQuery = undefined
+
+</script>
+
+
+<link href="plugins/css/960_12.css" rel="stylesheet" type="text/css">
+<link href="plugins/css/plugins.css" rel="stylesheet" type="text/css">
+
+<div id="plugins" class="aq-console-plugins" ng-app='aq-console-plugins' ng-controller="AqConsolePluginCtl" ng-cloak>
+
+	<div class="statline">
+		{{main.alert}}
+		<button  ng-show="main.alert"  type="button" class="close" data-dismiss="alert" ng-click="main.alert=''">X</button>
+	</div>
+
+
+	<ng-view>
+
+	<script src="plugins/js/angular.js"></script>
+	<script src="plugins/js/plugins.js"></script>
+
+</div> 

@@ -1,1 +1,4 @@
+*.jar
+*.war
+*.ear
 cache/

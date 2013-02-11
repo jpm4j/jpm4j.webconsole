@@ -1,9 +1,8 @@
 *.class
 
+*-latest.jar
+
 # Package Files #
-*.jar
-*.war
-*.ear
 .sass-cache/
 bin/
 bin_test/

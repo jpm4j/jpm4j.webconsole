@@ -11,7 +11,7 @@
 		$scope.main = {}
 		
 		$scope.go = function(to) {
-			$location.url(to);
+			location = '#/' + to;
 		}
 	}
 	
@@ -127,7 +127,14 @@
 		}
 		
 		$scope.search   = function()  	   { $location.url('/search/'+ $scope.query); }
+		$scope.me 		= function(program) { 
+			if ( program.last.bsn ===  'jpm4j.webconsole' ) 
+				return 'isme';
+			else 
+				return ''; 
+		}
 		
+
 		
 		// Start function, everything before is just initialization
 		

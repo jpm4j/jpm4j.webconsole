@@ -5,12 +5,12 @@
 <h2 ng-show='!query'>Web Console Plugins</h2>
 <form class=buttons ng-submit='search()'>
 	<div>
-		<button class='help' ng-click='go("help")'>?</button>
+		<a class='help' href='#/help'>?</a>
 		<button class='search' ng-click='search()'>Search</button>
 		<input type=text ng-model=query placeholder='Enter words (now showing Webconsole plugins)'>
 	</div>
 </form>
-	<div class=plugin ng-repeat='program in programs'>
+	<div class='plugin' ng-class='me(program)' ng-repeat='program in programs'>
 		<img class='icon' ng-src='{{icon(program)}}' ng-show='icon(program)'>
 		<h3 class='{{type(program)}}'>
 			<a href="https://www.jpm4j.org/#/p/{{program.groupId}}/{{program.artifactId}}/" target=_>{{program.last.bsn}} {{program.last.baseline}}</a>

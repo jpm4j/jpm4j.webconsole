@@ -9,13 +9,12 @@ window.jQuery = undefined
 <link href="plugins/css/960_12.css" rel="stylesheet" type="text/css">
 <link href="plugins/css/plugins.css" rel="stylesheet" type="text/css">
 
-<div id="plugins" class="aq-console-plugins" ng-app='aq-console-plugins' ng-controller="AqConsolePluginCtl" ng-cloak>
+<div id="plugins" class="aq-console-plugins ng-cloak" ng-app='aq-console-plugins' ng-controller="AqConsolePluginCtl" >
 
 	<div class="statline">
 		{{main.alert}}
 		<button  ng-show="main.alert"  type="button" class="close" data-dismiss="alert" ng-click="main.alert=''">X</button>
 	</div>
-
 
 	<ng-view>
 

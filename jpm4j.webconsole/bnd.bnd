@@ -40,6 +40,9 @@ Include-Resource: \
 		cmd='scss ${cwd}/sass/plugins.scss', \
 	img=img
 
+Provide-Capability: \
+		x-jpm-plugin; \
+			x-jpm-plugin=apache.felix.webconsole
 
 -runproperties: org.osgi.service.http.port=8081
 

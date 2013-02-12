@@ -40,6 +40,8 @@
 					$scope.programs = data.programs || $scope.programs; 
 					$scope.programs = data.programs || $scope.programs; 
 					$scope.main.alert= data.error;
+					if ( action === 'INSTALL')
+						document.location.reload(true);
 					
 				} )
 				.error( function(data,status) {

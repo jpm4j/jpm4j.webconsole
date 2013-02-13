@@ -10,7 +10,9 @@ Private-Package: jpm4j.webconsole.impl.css,\
 	org.apache.felix.http.jetty;version='[2.2.0,3)',\
 	org.apache.felix.configadmin;version=1.6.0,\
 	org.apache.felix.log;version=1.0.1,\
-	org.apache.felix.metatype;version=1.0.6
+	org.apache.felix.metatype;version=1.0.6, \
+	aQute.xray.plugin;version='[1.0.8,1.0.9)'
+	
 -runee: JavaSE-1.6
 Service-Component: *
 -runfw: org.apache.felix.framework;version='[4.0.3,4.0.3]'
@@ -59,4 +61,4 @@ have an x-jpm-plugin:x-jpm-plugin=apache.felix.webconsole capability). However, 
 generic installer since it is possible to search for any OSGi bundle on JPM4j and directly install it. \
 At this moment, only direct bundles are installed but of course an extension to OBR is very desirable.
 
-Bundle-Version: 1.1.1
+Bundle-Version: 1.1.2

@@ -28,11 +28,14 @@
 		/**
 		 * Sends a request
 		 */
-		function send(action, location) {
+		function send(action, location, bundleId) {
 			$scope.main.alert = "Loading ...";
 			var h = {action:action, query: $scope.query};
 			if ( location )
 				h.location = location;
+			
+			if ( bundleId )
+				h.bundleId = bundleId;
 			
 			$http.post("plugins/", h)
 				.success( function(data) {
@@ -114,7 +117,7 @@
 		}
 		$scope.manage 	= function(program) { window.location = "bundles/" + getBundle(program.last.bsn).bundleId; }
 		$scope.refresh  = function() 	    { send('REFRESH'); }
-		$scope.update 	= function(program) { send('UPDATE',  program.last.url); }
+		$scope.update 	= function(program) { send('UPDATE',  program.last.url, getBundle(program.last.bsn).bundleId); }
 		$scope.install 	= function(program) { send('INSTALL', program.last.url); }
 		
 		$scope.type  	= function(program) { 
@@ -122,7 +125,7 @@
 			if ( !b)
 				return 'install';
 			
-			if ( compareVersions(program.version, b.version) > 0)
+			if ( compareVersions(program.last.version, b.version) > 0)
 				return 'update';
 
 			return 'manage';

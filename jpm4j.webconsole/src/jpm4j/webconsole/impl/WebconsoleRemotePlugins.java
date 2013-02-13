@@ -113,12 +113,22 @@ public class WebconsoleRemotePlugins extends AbstractWebConsolePlugin {
 			Command c = codec.dec().from(rq.getInputStream()).get(Command.class);
 			try {
 				switch (c.action) {
-					case INSTALL : {
-						Bundle b = context.installBundle(c.location);
-						b.start();
-						response.bundles = getBundleStates();
-						break;
+				case INSTALL : {
+					Bundle b = context.installBundle(c.location);
+					b.start();
+					response.bundles = getBundleStates();
+					break;
+				}
+
+				case UPDATE : {
+					Bundle b = context.getBundle(c.bundleId);
+					if ( b != null) {
+						InputStream in = new URL(c.location).openStream();
+						b.update(in);
 					}
+					response.bundles = getBundleStates();
+					break;
+				}
 
 					case UNINSTALL : {
 						Bundle b = context.getBundle(c.location);

@@ -1,0 +1,110 @@
+.aq-console-plugins * {
+  box-sizing: border-box; }
+.aq-console-plugins .ng-cloak {
+  display: none; }
+.aq-console-plugins .isme {
+  opacity: 0.5; }
+.aq-console-plugins button {
+  cursor: pointer; }
+.aq-console-plugins form {
+  max-width: 600px; }
+.aq-console-plugins p, .aq-console-plugins ul, .aq-console-plugins li, .aq-console-plugins pre {
+  margin: 6px 0 6px 0;
+  line-height: 110%; }
+.aq-console-plugins em {
+  font-style: italic; }
+.aq-console-plugins pre {
+  margin: 10px 0 10px 0;
+  padding: 6px;
+  border: 1px solid lightgrey;
+  background-color: #F0F0F0; }
+.aq-console-plugins hr {
+  margin-top: 10px; }
+.aq-console-plugins button, .aq-console-plugins input {
+  border: 1px solid lightgrey;
+  background: #e6e6e6 url(images/ui-bg_glass_75_e6e6e6_1x400.png) 50% 50% repeat-x;
+  color: #555555;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  height: 20px; }
+.aq-console-plugins button {
+  min-width: 8em;
+  padding: 2px; }
+  .aq-console-plugins button.close {
+    float: right; }
+  .aq-console-plugins button.help {
+    width: auto;
+    min-width: 20px; }
+.aq-console-plugins input {
+  width: 300px;
+  padding: 2px; }
+.aq-console-plugins h2, .aq-console-plugins h3 {
+  font-weight: bold;
+  font-size: 140%;
+  margin-bottom: 6px;
+  margin-top: 0px; }
+.aq-console-plugins h3 {
+  font-size: 120%; }
+.aq-console-plugins .manage:before {
+  content: "\2729\00A0 "; }
+.aq-console-plugins .install:before {
+  content: "\2B07\00A0 "; }
+.aq-console-plugins .update:before {
+  content: "\272E\00A0 "; }
+.aq-console-plugins .buttons {
+  clear: both;
+  padding: 10px 0px 20px 0px; }
+  .aq-console-plugins .buttons input[type=text] {
+    float: right; }
+.aq-console-plugins .plugins {
+  max-width: 600px;
+  margin-top: 40px;
+  margin-bottom: 40px; }
+  .aq-console-plugins .plugins .plugin {
+    padding-top: 10px;
+    border-top: 1px solid lightgrey;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    clear: both; }
+    .aq-console-plugins .plugins .plugin button {
+      margin: 10px 0 10px 0px;
+      float: right;
+      clear: both; }
+.aq-console-plugins img.icon {
+  width: 64px;
+  max-height: 64px;
+  float: right;
+  padding: 0px 0px 8px 10px; }
+.aq-console-plugins .statline {
+  min-height: 16px; }
+.aq-console-plugins table {
+  width: 100%; }
+  .aq-console-plugins table td, .aq-console-plugins table th {
+    padding: 4px;
+    border-right: 1px solid lightgrey; }
+    .aq-console-plugins table td:last-child, .aq-console-plugins table th:last-child {
+      border-right: none; }
+  .aq-console-plugins table th {
+    font-weight: bold; }
+  .aq-console-plugins table td:nth-child(1) {
+    font-weight: bold;
+    text-align: right; }
+  .aq-console-plugins table tr {
+    border-top: 1px solid lightgrey; }
+.aq-console-plugins .help #screen {
+  width: 100%;
+  border: 1px solid lightgray;
+  margin: 12px 0 12px 0px;
+  padding: 10px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px; }
+.aq-console-plugins .help h2 {
+  margin-top: 20px; }
+.aq-console-plugins a.help {
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  background-image: url("../help.png");
+  background-repeat: no-repeat; }

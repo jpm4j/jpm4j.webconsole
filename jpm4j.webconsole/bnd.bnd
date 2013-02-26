@@ -37,12 +37,7 @@ Export-Package: aQute.library.remote,\
 	aQute.struct,\
 	baseline
 	
-cwd = ${project}
 Include-Resource: \
-	sass=sass, \
-	jpm4j/webconsole/impl/css/plugins.css; \
-		requires='${cwd}/sass/plugins.scss'; \
-		cmd='scss ${cwd}/sass/plugins.scss', \
 	img=img
 
 Provide-Capability: \
